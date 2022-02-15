@@ -1,0 +1,88 @@
+<!--
+https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4
+https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217
+
+https://upload.wikimedia.org/wikipedia/commons/e/e8/Elephants_Dream_s5_both.jpg
+https://archive.org/download/ElephantsDream/ed_hd.ogv
+https://archive.org/download/ElephantsDream/ed_hd.avi
+https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4
+
+https://dash.akamaized.net/akamai/bbb_30fps/bbb_30fps.mpd
+
+https://reference.dashif.org/dash.js/latest/dist/dash.all.debug.js
+
+https://cdnjs.cloudflare.com/ajax/libs/shaka-player/3.3.1/shaka-player.compiled.js
+
+Cheat to shaka:
+new shaka.Player(video)
+
+async function initPlayer() {
+  const video = document.getElementById("video");
+  const player = new shaka.Player(video);
+  window.player = player;
+
+  player.addEventListener("error", function(event) {
+    console.error(event);
+  });
+
+  try {
+    await player.load(manifestUrl);
+    console.log("The video has now been loaded!");
+  } catch (error) {
+    console.error("Error code", error.code, "object", error);
+  }
+}
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://reference.dashif.org/dash.js/latest/dist/dash.all.debug.js"></script>
+    <title>HTML Example - Accedo Academy</title>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <p>
+      Yaay! It'n not my first HTML though. Here's the status of the player:
+      <span id="status"></span>
+    </p>
+
+    <video
+      poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+      controls
+      width="800"
+      height="600"
+    ></video>
+    <script>
+      window.addEventListener("DOMContentLoaded", initApp);
+
+      function initApp() {
+        var videoElement,
+          playerInstance,
+          statusMessageElement,
+          manifestUrl =
+            "https://dash.akamaized.net/akamai/bbb_30fps/bbb_30fps.mpd";
+
+        videoElement = document.querySelector("video");
+        playerInstance = dashjs.MediaPlayer().create();
+        playerInstance.initialize(videoElement, manifestUrl);
+
+        statusMessageElement = document.getElementById("status");
+
+        videoElement.addEventListener("play", onVideoPlay);
+        videoElement.addEventListener("pause", onVideoPause);
+
+        function onVideoPlay(event) {
+          statusMessageElement.innerHTML = "playing";
+        }
+
+        function onVideoPause(event) {
+          statusMessageElement.innerHTML = "paused";
+        }
+      }
+    </script>
+  </body>
+</html>
