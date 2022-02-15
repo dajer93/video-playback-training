@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5 Player</title>
+  </head>
+  <body>
+    <video
+      src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+      type="video/mp4"
+      autoplay
+      controls
+      poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+      width="800"
+      height="600"
+      loop
+    >
+      Sorry, your browser doesn't support embedded videos.
+    </video>
+    <div id="message"></div>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        var videoElement = document.querySelector("video");
+        var messageElement = document.getElementById("message");
+
+        videoElement.addEventListener("pause", function () {
+          messageElement.innerHTML = "PAUSED";
+        });
+
+        videoElement.addEventListener("play", function () {
+          messageElement.innerHTML = "PLAYING";
+        });
+      });
+    </script>
+
+  </body>
+</html>
