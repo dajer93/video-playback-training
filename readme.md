@@ -20,7 +20,7 @@ You'll get to know these better later, I just wanted to spare a few words on the
 
 I know HTML is not a programming language, but as I mentioned: this session is not about programming, it's about video players.
 So HTML is a markup language that was originally designed for CERN researchers to share documents in the 80s. It allows the usage of links (or hyperlinks).
-Later in the 90s it made it to the internet and other technologies started to rise to support it: CSS for specify appearance & JS to specify behavior.
+Later in the 90s it made it to the internet and other technologies started to rise to support it: CSS to specify appearance & JS to specify behavior.
 
 Jump to the 2010s, HTML5 became the standard for describing webpages. It's goal was to improve the language with the support of the latest multimedia.
 HTML5 allows you to embed a media player in your document. There are two HTML elements to serve this purpose: video, audio
