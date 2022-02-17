@@ -23,7 +23,9 @@
     <div id="message"></div>
 
     <script>
-      window.addEventListener("DOMContentLoaded", function () {
+      window.addEventListener("DOMContentLoaded", initApp);
+
+      function initApp() {
         var videoElement = document.querySelector("video");
         var messageElement = document.getElementById("message");
 
@@ -34,7 +36,7 @@
         videoElement.addEventListener("play", function () {
           messageElement.innerHTML = "PLAYING";
         });
-      });
+      }
     </script>
 
   </body>
