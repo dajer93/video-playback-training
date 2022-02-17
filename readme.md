@@ -1,14 +1,11 @@
 # Video players
 
 Hi, my name is Martin and I'm a software engineer at Accedo.
-Today we're going to talk about video playback and players.
-My presentation has three parts:
+This is a summary of video playback and players.
 
 - Video & streaming related file types
 - HTML5 video element
 - Players: dash.js, ExoPlayer, AVPlayer, etc...
-
-In the introduction I also want to speak a bit about playback related file types we're going to work with.
 
 ## Video & streaming related file types
 
@@ -20,11 +17,10 @@ You'll get to know these better later, I just wanted to spare a few words on the
 
 I know HTML is not a programming language, but as I mentioned: this session is not about programming, it's about video players.
 So HTML is a markup language that was originally designed for CERN researchers to share documents in the 80s. It allows the usage of links (or hyperlinks).
-Later in the 90s it made it to the internet and other technologies started to rise to support it: CSS to specify appearance & JS to specify behavior.
+Later in the 90s it made it to the internet and other technologies started to rise to support it: CSS to specify appearance & JavaScript to specify behavior.
 
 Jump to the 2010s, HTML5 became the standard for describing webpages. It's goal was to improve the language with the support of the latest multimedia.
 HTML5 allows you to embed a media player in your document. There are two HTML elements to serve this purpose: video, audio
-We are going to talk about the video element in this part of my presentation.
 
 ### Attributes
 
@@ -54,18 +50,18 @@ There are events dispatched on various playback events. You can subscribe to the
 
 Simple HTML5 video element with a single source:
 
-Poster image sample: <https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217>
-MP4 sample: <https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4>
+- Poster image sample: <https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217>
+- MP4 sample: <https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4>
 
 #### Multiple sources
 
 Allows the video to be watched regardless of which codecs are supported by the browser.
 Add multiple sources to support various browsers.
 
-Poster image sample: <https://upload.wikimedia.org/wikipedia/commons/e/e8/Elephants_Dream_s5_both.jpg>
-OGG sample (type=video/ogg): <https://archive.org/download/ElephantsDream/ed_hd.ogv>
-AVI sample (type=video/avi): <https://archive.org/download/ElephantsDream/ed_hd.avi>
-MP4 sample (type=video/mp4): <https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4>
+- Poster image sample: <https://upload.wikimedia.org/wikipedia/commons/e/e8/Elephants_Dream_s5_both.jpg>
+- OGG sample (type=video/ogg): <https://archive.org/download/ElephantsDream/ed_hd.ogv>
+- AVI sample (type=video/avi): <https://archive.org/download/ElephantsDream/ed_hd.avi>
+- MP4 sample (type=video/mp4): <https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4>
 
 #### MPEG DASH Streaming
 
@@ -75,7 +71,7 @@ the HTML5 video element is not enough. The playback must be handled with JS in o
 
 Web browsers do not natively support the dash format.
 
-MPD sample (type=video/dash+xml): <https://dash.akamaized.net/akamai/bbb_30fps/bbb_30fps.mpd>
+- MPD sample (type=video/dash+xml): <https://dash.akamaized.net/akamai/bbb_30fps/bbb_30fps.mpd>
 
 ### Sources
 
