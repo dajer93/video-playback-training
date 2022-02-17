@@ -75,8 +75,6 @@ Web browsers do not natively support the dash format.
 
 ### Sources
 
-### Sources
-
 - <https://stackoverflow.com/questions/28529383/why-do-i-need-dash-js-for-streaming-mpeg-dash-videos>
 - <https://shaka-player-demo.appspot.com/docs/api/tutorial-basic-usage.html>
 - <https://en.wikipedia.org/wiki/HTML5>
